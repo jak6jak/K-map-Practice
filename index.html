@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>K map practice</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row flex-fill" id="mainRow">
+      <div class="col" id="createTableHere">
+        <table class="table" id="kmapTable">
+          <canvas id="canvas" width="300" height="300">
+            Sorry, your browser doesn't support the canvas
+          </canvas>
+        </table>
+      </div>
+      <div class="col-lg-1">
+        <div class="btn-group-vertical btn-group-toggle colorButtons" data-toggle="buttons">
+          <button type="button" class="btn btn-secondary" id="blackBtn" onclick="changeColor('00000')">&nbsp</button>
+          <button type="button" class="btn btn-secondary" id="redBtn" onclick="changeColor('ff035b')">&nbsp</button>
+          <button type="button" class="btn btn-secondary" id="blueBtn" onclick="changeColor('1212df')">&nbsp</button>
+          <button type="button" class="btn btn-secondary" id="greenBtn" onclick="changeColor('13f513')">&nbsp</button>
+          <button type="button" class="btn btn-secondary" id="yellowBtn" onclick="changeColor('ffae00')">&nbsp</button>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-12">
+        <div class="row splitWidth">
+          <h1 id="mainTask">Find the lowest cost SOP of the following equation: </h1>
+          <h1 id="question">&#402;(a,b,c,d) = &Sigma;m(0,1,2,3,4,5,6)</h1>
+        </div>
+        <form class="needs-validation" nonvalidate id="answerForm" action="javascript:void(0);">
+          <div class="form-row">
+            <div class="form-group mb-2">
+              <label for="answerBox">Answer</label>
+              <input type="text" class="form-control form-control-lg" id="answerBox" required>
+              <div class="valid-feedback"> </div>
+              <div class="invalid-feedback" id="invalid-feedback"></div>
+
+
+            </div>
+            <button type="button" class="btn btn-primary btn-lg ml-4" id="answerButton" onclick="parseAnswer()">check
+              answer</button>
+          </div>
+        </form>
+        <!--  </div> -->
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="pixi.js"></script>
+
+  <script src="populateTable.js"></script>
+  <script src="solver.js"></script>
+  <script src="kmap.js"></script>
+  <script src="startup.js"></script>
+
+</body>
+
+</html>
